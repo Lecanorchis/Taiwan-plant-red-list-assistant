@@ -6,10 +6,32 @@ import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import { test } from 'node:test';
 import { queryTbn } from '../skills/taiwan-plant-red-list/scripts/occurrences.mjs';
-import { gridRange, project } from '../skills/taiwan-plant-red-list/scripts/range.mjs';
+import { gridRange, project, rangeSvg } from '../skills/taiwan-plant-red-list/scripts/range.mjs';
+import standardRegion from '../skills/taiwan-plant-red-list/references/region.json' with { type: 'json' };
 
 const cli = fileURLToPath(new URL('../skills/taiwan-plant-red-list/scripts/redlist.mjs', import.meta.url));
 const uuid = '11111111-2222-4333-8444-555555555555';
+
+test('init 預設採新版範圍，並保存到報告', (t) => {
+  const root = mkdtempSync(join(tmpdir(), 'redlist-test-'));
+  t.after(() => rmSync(root, { recursive: true, force: true }));
+  const run = (...args) => spawnSync(process.execPath, [cli, ...args], {
+    env: { ...process.env, RED_LIST_WORKSPACE: root }, encoding: 'utf8',
+  });
+  const result = run('init');
+  assert.equal(result.status, 0, result.stderr);
+  const { region } = JSON.parse(result.stdout);
+  assert.equal(region, standardRegion.description);
+  assert.equal(run('init', '試驗區域').status, 1);
+  const list = join(root, 'list.json');
+  writeFileSync(list, JSON.stringify([{ id: 'sample', scientificName: 'Exemplaria montana', rank: 'species' }]));
+  assert.equal(run('add', list).status, 0);
+  const report = run('report', 'sample');
+  assert.equal(report.status, 0, report.stderr);
+  assert.ok(readFileSync(JSON.parse(report.stdout).path, 'utf8').includes(region));
+  const map = rangeSvg(gridRange([]), 'Exemplaria montana', null, standardRegion);
+  for (const island of ['馬祖列島', '烏坵', '東沙島', '太平島']) assert.ok(map.includes(island));
+});
 
 test('清單只評估末端，觀測需人工篩選，草稿保留證據缺口', (t) => {
   const root = mkdtempSync(join(tmpdir(), 'redlist-test-'));

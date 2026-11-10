@@ -7,7 +7,7 @@ compatibility: Node.js 22+ for the bundled CLI. Live data queries need HTTPS acc
 
 # 臺灣維管束植物區域紅皮書評估
 
-用單一 agent 跟使用者逐步評估。每次只處理一個末端分類群，將可恢復的狀態存入本機工作區。命令中的 `<cli>` 代表 `node <本技能目錄>/scripts/redlist.mjs`。開工前用 `<cli> list` 檢查既有清單，或先確認區域範圍再用 `<cli> init` 建立工作區。區域範圍要寫清楚納入的離島及其依據。
+用單一 agent 跟使用者逐步評估。每次只處理一個末端分類群，將可恢復的狀態存入本機工作區。命令中的 `<cli>` 代表 `node <本技能目錄>/scripts/redlist.mjs`。開工前用 `<cli> list` 檢查既有清單，或用 `<cli> init` 依[新版紅皮書範圍](references/region.json)建立工作區。續作時核對 `project.json` 的評估範圍。只有使用者另指定個人子區域時，才用 `<cli> init "自訂區域"`。
 
 1. **建立清單及核對名稱。** 把使用者指定的分類群加入清單。`<cli> taxon` 回傳候選，須比對分類來源、接受名、異名、階層及概念。釐清同一種的種下單位後，用 `parentId` 表示重疊關係，只評估末端。跨來源查詢只採用已確認符合該分類概念的識別碼。
 2. **確認適用性。** 確認區內野生族群、原生性、繁殖或保育引入歷史，依區域指引記錄適用、不適用或待查。先讀 [評估方法](references/method.md) 中的「適用性」。歷史名錄和全球類別可引用為背景，仍要逐項查證本次區域結論。

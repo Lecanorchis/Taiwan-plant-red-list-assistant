@@ -2,15 +2,19 @@
 
 以可跨模型使用的 Agent Skill 和本機工具，協助使用者依 IUCN 指引完成臺灣維管束植物的個人區域評估。工作從一份分類群清單開始，逐一處理種、亞種或變種，保留可追溯的證據、區內初評、區域調整及審閱狀態。
 
+## 新版紅皮書評估範圍
+
+以中華民國目前實際管轄範圍內的陸域為準，涵蓋臺灣本島及周邊附屬島嶼（蘭嶼、小蘭嶼、綠島、小琉球、龜山島、基隆嶼、彭佳嶼、棉花嶼、花瓶嶼等）、澎湖群島、金門群島、馬祖列島、烏坵、東沙島及太平島。 [範圍設定](skills/taiwan-plant-red-list/references/region.json)
+
 ## 開始使用
 
 將 [技能目錄](skills/taiwan-plant-red-list/) 整份提供給支援 [Agent Skills](https://agentskills.io/specification) 的主機，或讓具備檔案和終端機工具的 agent 先讀取 [SKILL.md](skills/taiwan-plant-red-list/SKILL.md)。技能使用 Markdown 與本機 CLI，無須設定模型 API 金鑰。僅能對話的模型可讀相同指南，搭配人工執行工具。
 
-在儲存庫根目錄使用 Node.js 22 或更新版本。以下區域與清單用於試跑，可換成實際評估範圍及分類群。
+在儲存庫根目錄使用 Node.js 22 或更新版本。`init` 採新版紅皮書評估範圍，下列分類群清單供試跑。
 
 ```sh
 node skills/taiwan-plant-red-list/scripts/redlist.mjs sources
-node skills/taiwan-plant-red-list/scripts/redlist.mjs init "臺灣本島、澎湖、蘭嶼、綠島"
+node skills/taiwan-plant-red-list/scripts/redlist.mjs init
 node skills/taiwan-plant-red-list/scripts/redlist.mjs add examples/taxa.json
 node skills/taiwan-plant-red-list/scripts/redlist.mjs list
 node skills/taiwan-plant-red-list/scripts/redlist.mjs report taiwania-cryptomerioides
@@ -29,4 +33,4 @@ node skills/taiwan-plant-red-list/scripts/redlist.mjs report taiwania-cryptomeri
 
 工作流程參考 `ai-redlist-assessments` 的分項查核概念，以單一 agent 和臺灣區域指引設計。分布圖沿用原評估小幫手的點位、網格、凸包三層呈現，由 CLI 產生 SVG。 [參考儲存庫](https://github.com/shaneweisz/ai-redlist-assessments) · [原評估小幫手](https://taiwan-plant-red-list-helper.lecanorchis.chatgpt.site/)
 
-第一階段交付個人草稿與人工審閱報告。資料上傳、多人整合及互評留待下一階段。區域邊界慣例、分類來源優先序和報告格式可由首批實際評估案例校正。
+第一階段交付個人草稿與人工審閱報告。資料上傳、多人整合及互評留待下一階段。分類來源優先序和報告格式可由首批實際評估案例校正。

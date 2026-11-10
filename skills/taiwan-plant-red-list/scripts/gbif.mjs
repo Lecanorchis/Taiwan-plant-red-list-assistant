@@ -18,9 +18,17 @@ export async function findGbifTaxon(name) {
   return { url, retrievedAt: new Date().toISOString(), candidates };
 }
 
-export async function getGbifOccurrences(taxon, maxPages) {
+function searchGeometry(areas) {
+  const rings = areas.map(({ bounds: [west, south, east, north] }) => (
+    `((${west} ${south}, ${east} ${south}, ${east} ${north}, ${west} ${north}, ${west} ${south}))`
+  ));
+  return `MULTIPOLYGON (${rings.join(', ')})`;
+}
+
+export async function getGbifOccurrences(taxon, maxPages, searchAreas = []) {
   if (taxon.confirmed !== true || !isGbifKey(taxon.gbifKey)) throw new Error('請先確認分類群與 GBIF gbifKey。');
-  const params = { taxon_key: taxon.gbifKey, country: 'TW', occurrence_status: 'PRESENT', limit: '200' };
+  const spatial = searchAreas.length ? { geometry: searchGeometry(searchAreas) } : { country: 'TW' };
+  const params = { taxon_key: taxon.gbifKey, ...spatial, occurrence_status: 'PRESENT', limit: '200' };
   const pages = [];
   let count = 0;
   let truncated = true;

@@ -53,7 +53,7 @@
     "taxonApi": "https://techdocs.gbif.org/en/openapi/v1/species",
     "terms": "https://www.gbif.org/terms/data-user",
     "license": "逐資料集及紀錄查核 CC0、CC BY、CC BY-NC 等授權。",
-    "use": "以分類群 key 及 country=TW 取得觀測候選。引用紀錄及原資料集。"
+    "use": "以分類群 key 與地理搜尋框取得新版範圍的有座標候選。自訂或舊工作區以 country=TW 搜尋。引用紀錄及原資料集。"
   },
   {
     "id": "tbn-occurrence-v26",

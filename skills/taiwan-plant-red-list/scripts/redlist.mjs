@@ -6,11 +6,12 @@ import { findTaxon, getOccurrences, reviewedPoints, reviewTemplate } from './occ
 import { findGbifTaxon, getGbifOccurrences, isGbifKey } from './gbif.mjs';
 import { gridRange, rangeSvg } from './range.mjs';
 import { renderReport, validate } from './report.mjs';
+import standardRegion from '../references/region.json' with { type: 'json' };
 
 const help = `redlist <command>
 
   sources [keyword]                    查詢準則、文獻及資料來源
-  init "評估區域"                        建立個人工作區
+  init ["自訂區域"]                      建立工作區，預設採新版紅皮書評估範圍
   add <list.json>                      加入種、亞種、變種清單
   list                                 檢視清單、末端分類群與進度
   taxon "名稱" [gbif|tbn]               查詢候選。GBIF 用學名，TBN 可用中文名
@@ -63,8 +64,8 @@ async function run() {
       return args[0] ? sources.filter((source) => JSON.stringify(source).toLowerCase().includes(args[0].toLowerCase())) : sources;
     }
     case 'init':
-      arity(1);
-      return init(root, args[0]);
+      arity(0, 1);
+      return init(root, args[0] ?? standardRegion.description);
     case 'add':
       arity(1);
       return add(root, await readJson(args[0]));
@@ -84,7 +85,9 @@ async function run() {
       const maxPages = Number(pageLimit);
       if (!Number.isSafeInteger(maxPages) || maxPages < 1 || maxPages > 100) throw new Error('頁數上限須為 1–100。');
       const { taxon } = await leafAt(root, id);
-      const snapshot = await (provider === 'gbif' ? getGbifOccurrences : getOccurrences)(taxon, maxPages);
+      const { region } = await projectAt(root);
+      const searchAreas = region === standardRegion.description ? standardRegion.searchAreas : [];
+      const snapshot = provider === 'gbif' ? await getGbifOccurrences(taxon, maxPages, searchAreas) : await getOccurrences(taxon, maxPages);
       const dir = join(root, 'occurrences', id);
       await mkdir(dir, { recursive: true });
       const path = join(dir, `${snapshot.id}.json`);
@@ -114,7 +117,7 @@ async function run() {
       const { points, counts } = reviewedPoints(snapshot, review, region);
       const result = gridRange(points);
       const boundary = boundaryPath ? await readJson(boundaryPath) : await readJson(new URL('../assets/taiwan-context.geojson', import.meta.url));
-      const map = rangeSvg(result, taxon.scientificName, boundary);
+      const map = rangeSvg(result, taxon.scientificName, boundary, region === standardRegion.description ? standardRegion : undefined);
       const dir = join(root, 'range', id, randomUUID());
       const output = {
         version: 1, taxonId: id, scope: region, snapshotId: snapshot.id, snapshotHash: review.snapshotHash,

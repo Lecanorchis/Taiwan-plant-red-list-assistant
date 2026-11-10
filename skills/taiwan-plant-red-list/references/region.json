@@ -1,0 +1,16 @@
+{
+  "description": "中華民國目前實際管轄範圍內的陸域：臺灣本島及周邊附屬島嶼（蘭嶼、小蘭嶼、綠島、小琉球、龜山島、基隆嶼、彭佳嶼、棉花嶼、花瓶嶼等）、澎湖群島、金門群島、馬祖列島、烏坵、東沙島及太平島。",
+  "searchAreas": [
+    { "name": "臺灣本島、周邊附屬島嶼、澎湖及烏坵", "bounds": [119.15, 21.75, 122.25, 25.75] },
+    { "name": "金門群島", "bounds": [118.06, 24.30, 118.53, 24.59] },
+    { "name": "馬祖列島", "bounds": [119.78, 25.85, 120.60, 26.45] },
+    { "name": "東沙島", "bounds": [116.68, 20.66, 116.78, 20.75] },
+    { "name": "太平島", "bounds": [114.30, 10.32, 114.40, 10.43] }
+  ],
+  "mapLandmarks": [
+    { "name": "馬祖列島", "lon": 119.95, "lat": 26.16, "source": "https://www.matsuhb.gov.tw/chhtml/content/2277" },
+    { "name": "烏坵", "lon": 119.45, "lat": 24.98, "source": "https://www.cy.gov.tw/News_Content.aspx?n=213&s=8167" },
+    { "name": "東沙島", "lon": 116.73, "lat": 20.70, "source": "https://www.ey.gov.tw/state/4447F4A951A1EC45/094b1d53-de8d-4393-bde6-ab092969cce4" },
+    { "name": "太平島", "lon": 114.37, "lat": 10.38, "source": "https://airtw.moenv.gov.tw/CHT/EnvMonitoring/Background/BackgroundIntro.aspx" }
+  ]
+}

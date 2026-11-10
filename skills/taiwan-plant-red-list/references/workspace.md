@@ -4,15 +4,15 @@
 
 ## 清單與分類
 
-1. `init "臺灣本島、澎湖、蘭嶼、綠島"` 建立工作區。範例中的範圍可依評估目的調整，並與使用者確認。
+1. `init` 以[新版紅皮書的陸域範圍](region.json)建立工作區，並將範圍寫入 `project.json`，供篩選表與報告引用。若需個人子區域，可執行 `init "自訂區域"`。既有工作區會保留原範圍。如要以新版範圍重評，可設定 `RED_LIST_WORKSPACE` 為新的路徑，建立新工作區並重新查核分布及準則。
 2. `add <list.json>` 接受物件陣列。每筆需有 `id`、`scientificName`、`rank`。階層為 `species`、`subspecies` 或 `variety`。可附 `vernacularName` 及指向清單上位分類群的 `parentId`。ID 須為小寫英數加連字號，且以英文字母開頭。相同清單可重送，既有評估保留。後續發現有種下單位時，先核對並更新清單階層再續評。
 3. `list` 顯示清單、末端標記與進度。`taxon "名稱"` 查 TBN 候選，`taxon "學名" gbif` 查 GBIF 候選。查詢回傳資料須和臺灣物種名錄或適當分類來源交叉核對。GBIF 如回傳異名，查證並採用相同階層的接受名 key。確認後編輯 `taxa/<id>.json` 的 `taxon`，填 `confirmed: true`、`authority`、對應 `tbnUuid` 或 `gbifKey`，必要時填 `synonyms` 與 `notes`。
 
 ## 分布與人工篩選
 
-1. `occurrences <id> tbn 10` 依確認的 TBN UUID 查 v26 開放端點，保存每頁原始回傳、URL、查詢時間與頁數截斷狀態。`occurrences <id> gbif 10` 查 GBIF `country=TW` 的存在紀錄。兩個來源的涵蓋範圍與評估邊界可能不同，特別需查漏離島。換來源時重新核對識別碼和範圍，保留查詢失敗紀錄。
+1. `occurrences <id> tbn 10` 依確認的 TBN UUID 查 v26 開放端點，保存每頁原始回傳、URL、查詢時間與頁數截斷狀態。新版範圍下，`occurrences <id> gbif 10` 以多個座標搜尋框查找具有座標的存在紀錄，包含東沙島與太平島。搜尋框可能包含區外點，仍需逐筆確認。自訂或舊工作區使用 GBIF `country=TW` 查詢，需另外核對離島涵蓋。換來源時重新核對識別碼和範圍，保留查詢失敗紀錄。
 2. `review <id> <snapshot.json>` 產生篩選表，初始決策全部是 `pending`。以紀錄 ID 逐筆核對，填 `reviewer` 及 `decision`（`include`、`exclude`、`pending`）。納入及排除都需填 `rationale`。查現存野生族群、分類、區域、採集年代及來源，排除栽培、逸失、重複採集及位置不可靠的點。來源不明或紀錄不足時保留待查。若把不確定性缺值的紀錄納入，需引用可查的座標品質依據。工具會拒絕把分類不符、無有效座標、已模糊化或誤差達 2 公里的點用於精細網格。重複 ID 需另外釐清來源。
-3. `range <id> <snapshot.json> <review.json> [boundary.geojson]` 產生 `range/<id>/<run>/range.json`、篩選表副本及 `map.svg`。選用底圖時請提供 WGS84 Polygon 或 MultiPolygon GeoJSON，圖層只供視覺定位。可用瀏覽器離線開 SVG，滑鼠移到點上可看紀錄 ID。快照雜湊不同時須重新篩選。
+3. `range <id> <snapshot.json> <review.json> [boundary.geojson]` 產生 `range/<id>/<run>/range.json`、篩選表副本及 `map.svg`。新版範圍的總覽以灰色十字標示簡化底圖省略的離島位置。選用底圖時請提供 WGS84 Polygon 或 MultiPolygon GeoJSON，圖層只供視覺定位。可用瀏覽器離線開 SVG，滑鼠移到觀測點上可看紀錄 ID。快照雜湊不同時須重新篩選。
 
 ## 報告欄位
 

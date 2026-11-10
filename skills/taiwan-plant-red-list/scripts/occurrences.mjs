@@ -85,7 +85,8 @@ export function screen(snapshot) {
     if (gbif) {
       if ((row.acceptedTaxonKey ?? row.taxonKey) !== snapshot.taxonKey) flags.push('taxon-mismatch');
       if (row.dataGeneralizations || row.informationWithheld) flags.push('generalized-or-unknown');
-      if (row.countryCode !== 'TW' || row.issues?.some((issue) => ['COUNTRY_COORDINATE_MISMATCH', 'COORDINATE_INVALID', 'ZERO_COORDINATE', 'COORDINATE_OUT_OF_RANGE', 'GEODETIC_DATUM_INVALID', 'GEODETIC_DATUM_ASSUMED_WGS84'].includes(issue))) {
+      if (row.countryCode !== 'TW') flags.push('country-code-needs-review');
+      if (row.issues?.some((issue) => ['COUNTRY_COORDINATE_MISMATCH', 'COORDINATE_INVALID', 'ZERO_COORDINATE', 'COORDINATE_OUT_OF_RANGE', 'GEODETIC_DATUM_INVALID', 'GEODETIC_DATUM_ASSUMED_WGS84'].includes(issue))) {
         flags.push('coordinate-needs-review');
       }
       if (row.occurrenceStatus !== 'PRESENT') flags.push('presence-unverified');
@@ -113,7 +114,7 @@ export function reviewTemplate(snapshot, scope) {
     decisions: screen(snapshot).map(({ id, lat, lon, uncertaintyM, flags, row }) => ({
       id, decision: 'pending', rationale: '',
       context: {
-        lat, lon, uncertaintyM, flags, year: row.year, county: row.county ?? row.stateProvince,
+        lat, lon, uncertaintyM, flags, year: row.year, county: row.county ?? row.stateProvince, countryCode: row.countryCode,
         dataset: row.datasetName ?? row.datasetKey, license: row.license,
         source: gbif ? `https://www.gbif.org/occurrence/${id}` : row.source,
       },
