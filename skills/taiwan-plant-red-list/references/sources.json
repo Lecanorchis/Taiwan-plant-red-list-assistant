@@ -1,0 +1,85 @@
+[
+  {
+    "id": "iucn-criteria-3.1",
+    "title": "IUCN Red List Categories and Criteria, version 3.1, second edition",
+    "year": 2012,
+    "url": "https://iucn.org/resources/publication/iucn-red-list-categories-and-criteria-version-31-second-edition",
+    "access": "官方連結",
+    "use": "類別定義、A–E 閾值及準則代碼。"
+  },
+  {
+    "id": "iucn-usage-16",
+    "title": "Guidelines for Using the IUCN Red List Categories and Criteria, version 16",
+    "year": 2024,
+    "url": "https://nrl.iucnredlist.org/resources/redlistguidelines",
+    "access": "官方連結",
+    "use": "操作定義、證據品質、空間計算、逐項判讀與不確定性。正式提交前核對官方版本。"
+  },
+  {
+    "id": "iucn-regional-4.0",
+    "title": "Guidelines for Application of IUCN Red List Criteria at Regional and National Levels, version 4.0",
+    "year": 2012,
+    "url": "https://nrl.iucnredlist.org/about/regional",
+    "document": "https://s3.amazonaws.com/iucnredlist-newcms/staging/public/attachments/3154/reg_guidelines_en.pdf",
+    "access": "官方連結",
+    "use": "區域評估適用性、區內初評及區外族群調整。參見第 IV 章圖 1、圖 3、表 1 與附錄 3。"
+  },
+  {
+    "id": "tw-vascular-red-list-2017",
+    "title": "2017 臺灣維管束植物紅皮書名錄 / The Red List of Vascular Plants of Taiwan, 2017",
+    "authors": "臺灣植物紅皮書編輯委員會",
+    "publisher": "行政院農業委員會特有生物研究保育中心、行政院農業委員會林務局、臺灣植物分類學會",
+    "year": 2017,
+    "url": "https://www.tbri.gov.tw/view.php?id=653&theme=web_structure",
+    "file": "../assets/The-Red-List-of-Vascular-Plants-of-Taiwan-2017.pdf",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "licenseEvidence": "https://commons.wikimedia.org/wiki/File:The_Red_List_of_Vascular_Plants_of_Taiwan,_2017.pdf",
+    "sha1": "903a8349d904dda16e3d150ae137d678d4421193",
+    "changes": "檔案原樣收錄。",
+    "use": "歷史評估、當時的分類群概念、區域範圍和準則。引用時記錄印刷頁碼、表號與使用學名。"
+  },
+  {
+    "id": "taicol",
+    "title": "臺灣物種名錄 / Catalogue of Life in Taiwan",
+    "url": "https://taicol.tw/",
+    "access": "官方連結",
+    "use": "核對接受名、異名、種下階層與分類概念。"
+  },
+  {
+    "id": "gbif-occurrence-v1",
+    "title": "GBIF Occurrence API v1",
+    "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "taxonApi": "https://techdocs.gbif.org/en/openapi/v1/species",
+    "terms": "https://www.gbif.org/terms/data-user",
+    "license": "逐資料集及紀錄查核 CC0、CC BY、CC BY-NC 等授權。",
+    "use": "以分類群 key 及 country=TW 取得觀測候選。引用紀錄及原資料集。"
+  },
+  {
+    "id": "tbn-occurrence-v26",
+    "title": "台灣生物多樣性網絡 Occurrence API v2.6",
+    "url": "https://www.tbn.org.tw/data/api/openapi/v25/occurrence",
+    "taxonApi": "https://www.tbn.org.tw/data/api/openapi/v25/taxon",
+    "terms": "https://www.tbn.org.tw/data/api",
+    "license": "開放 API 採政府資料開放授權條款，個別紀錄及多媒體欄位另有標示。",
+    "endpoint": "https://www.tbn.org.tw/api/v26/occurrence",
+    "use": "預設介接。實測使用 v26 開放端點，文件連結供查照欄位歷史。v26 的野生／栽培狀態欄位是 degreeOfEstablishment。"
+  },
+  {
+    "id": "natural-earth-taiwan-context",
+    "title": "Natural Earth 1:10m Admin 0 Map Units, v5.1.2",
+    "url": "https://github.com/nvkelso/natural-earth-vector/blob/v5.1.2/geojson/ne_10m_admin_0_map_units.geojson",
+    "file": "../assets/taiwan-context.geojson",
+    "license": "Public domain",
+    "licenseUrl": "https://www.naturalearthdata.com/about/terms-of-use/",
+    "changes": "擷取 TWN 圖徵、精簡屬性、座標取至小數五位。",
+    "use": "地圖定位背景。若需行政區界可依國土測繪中心資料自備 WGS84 GeoJSON。"
+  },
+  {
+    "id": "nlsc-county-boundaries",
+    "title": "國土測繪中心 直轄市、縣市界線（TWD97 經緯度）",
+    "url": "https://data.gov.tw/en/datasets/7442",
+    "license": "政府資料開放授權條款第 1 版",
+    "use": "選定區域及離島時的邊界資料來源，使用前確認適用年份與座標系統。"
+  }
+]
