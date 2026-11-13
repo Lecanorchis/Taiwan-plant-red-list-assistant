@@ -1,0 +1,144 @@
+{
+  "checkedAt": "2026-11-13T10:01:05.723Z",
+  "purpose": "Isolated P0 browser capability probe; not application tests",
+  "browsers": [
+    {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36",
+      "origin": "http://127.0.0.1:51765",
+      "secureContext": true,
+      "indexedDB": {
+        "roundTripAfterReload": true
+      },
+      "network": [
+        {
+          "id": "same_origin_control",
+          "url": "http://127.0.0.1:51765/control",
+          "readable": true,
+          "httpStatus": 200,
+          "responseType": "basic",
+          "applicationStatus": null,
+          "returnedRecords": null,
+          "hasNext": false,
+          "elapsedMs": 9
+        },
+        {
+          "id": "taicol_taxon",
+          "url": "https://api.taicol.tw/v2/taxon?taxon_id=t0055549",
+          "readable": false,
+          "error": "TypeError: Failed to fetch",
+          "elapsedMs": 210
+        },
+        {
+          "id": "tbn_taxon",
+          "url": "https://www.tbn.org.tw/api/v26/taxon?name=Taiwania%20cryptomerioides&withChildren=1&limit=2",
+          "readable": false,
+          "error": "TypeError: Failed to fetch",
+          "elapsedMs": 762
+        },
+        {
+          "id": "tbn_occurrence",
+          "url": "https://www.tbn.org.tw/api/v26/occurrence?taxonUUID=12aa667b-c42d-4c0b-84f3-bbe02311b01d&limit=1",
+          "readable": false,
+          "error": "TypeError: Failed to fetch",
+          "elapsedMs": 59
+        },
+        {
+          "id": "gbif_control",
+          "url": "https://api.gbif.org/v1/species/match?name=Taiwania%20cryptomerioides&kingdom=Plantae&strict=true",
+          "readable": true,
+          "httpStatus": 200,
+          "responseType": "cors",
+          "applicationStatus": "ACCEPTED",
+          "returnedRecords": null,
+          "hasNext": false,
+          "elapsedMs": 1264
+        }
+      ],
+      "storage": {
+        "estimateAvailable": true,
+        "quotaPositive": true,
+        "persisted": false
+      },
+      "fileCapabilities": {
+        "blobRoundTrip": true,
+        "downloadAttribute": true,
+        "fullZipBackupTested": false
+      },
+      "browser": "Chrome",
+      "diagnostics": [
+        "\"Access to fetch at 'https://api.taicol.tw/v2/taxon?taxon_id=t0055549' from origin 'http://127.0.0.1:51765' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\", source: http://127.0.0.1:51765/?resume=1 (0)",
+        "\"Access to fetch at 'https://www.tbn.org.tw/api/v26/taxon?name=Taiwania%20cryptomerioides&withChildren=1&limit=2' from origin 'http://127.0.0.1:51765' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\", source: http://127.0.0.1:51765/?resume=1 (0)",
+        "\"Access to fetch at 'https://www.tbn.org.tw/api/v26/occurrence?taxonUUID=12aa667b-c42d-4c0b-84f3-bbe02311b01d&limit=1' from origin 'http://127.0.0.1:51765' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\", source: http://127.0.0.1:51765/?resume=1 (0)"
+      ]
+    },
+    {
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+      "origin": "http://127.0.0.1:55055",
+      "secureContext": true,
+      "indexedDB": {
+        "roundTripAfterReload": true
+      },
+      "network": [
+        {
+          "id": "same_origin_control",
+          "url": "http://127.0.0.1:55055/control",
+          "readable": true,
+          "httpStatus": 200,
+          "responseType": "basic",
+          "applicationStatus": null,
+          "returnedRecords": null,
+          "hasNext": false,
+          "elapsedMs": 9
+        },
+        {
+          "id": "taicol_taxon",
+          "url": "https://api.taicol.tw/v2/taxon?taxon_id=t0055549",
+          "readable": false,
+          "error": "TypeError: Failed to fetch",
+          "elapsedMs": 263
+        },
+        {
+          "id": "tbn_taxon",
+          "url": "https://www.tbn.org.tw/api/v26/taxon?name=Taiwania%20cryptomerioides&withChildren=1&limit=2",
+          "readable": false,
+          "error": "TypeError: Failed to fetch",
+          "elapsedMs": 687
+        },
+        {
+          "id": "tbn_occurrence",
+          "url": "https://www.tbn.org.tw/api/v26/occurrence?taxonUUID=12aa667b-c42d-4c0b-84f3-bbe02311b01d&limit=1",
+          "readable": false,
+          "error": "TypeError: Failed to fetch",
+          "elapsedMs": 42
+        },
+        {
+          "id": "gbif_control",
+          "url": "https://api.gbif.org/v1/species/match?name=Taiwania%20cryptomerioides&kingdom=Plantae&strict=true",
+          "readable": true,
+          "httpStatus": 200,
+          "responseType": "cors",
+          "applicationStatus": "ACCEPTED",
+          "returnedRecords": null,
+          "hasNext": false,
+          "elapsedMs": 970
+        }
+      ],
+      "storage": {
+        "estimateAvailable": true,
+        "quotaPositive": true,
+        "persisted": false
+      },
+      "fileCapabilities": {
+        "blobRoundTrip": true,
+        "downloadAttribute": true,
+        "fullZipBackupTested": false
+      },
+      "browser": "Edge",
+      "diagnostics": [
+        "\"Access to fetch at 'https://api.taicol.tw/v2/taxon?taxon_id=t0055549' from origin 'http://127.0.0.1:55055' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\", source: http://127.0.0.1:55055/?resume=1 (0)",
+        "\"Access to fetch at 'https://www.tbn.org.tw/api/v26/taxon?name=Taiwania%20cryptomerioides&withChildren=1&limit=2' from origin 'http://127.0.0.1:55055' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\", source: http://127.0.0.1:55055/?resume=1 (0)",
+        "\"Access to fetch at 'https://www.tbn.org.tw/api/v26/occurrence?taxonUUID=12aa667b-c42d-4c0b-84f3-bbe02311b01d&limit=1' from origin 'http://127.0.0.1:55055' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.\", source: http://127.0.0.1:55055/?resume=1 (0)"
+      ]
+    }
+  ]
+}

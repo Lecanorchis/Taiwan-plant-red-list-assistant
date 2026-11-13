@@ -1,0 +1,326 @@
+{
+  "checkedAt": "2026-11-13T18:05:38.5968800+08:00",
+  "sourceUrl": "https://api.taicol.tw/v2/taxon?taxon_group=Lecanorchis&limit=300",
+  "httpStatus": 200,
+  "applicationStatus": {
+    "code": 200,
+    "message": "Success"
+  },
+  "info": {
+    "total": 28,
+    "limit": 300,
+    "offset": 0
+  },
+  "licenseSource": "https://taicol.tw/zh-hant/api",
+  "inTaiwan": 26,
+  "data": [
+    {
+      "taxon_id": "t0024125",
+      "name_id": 1736,
+      "simple_name": "Lecanorchis",
+      "rank": "Genus",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0002333",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-04-20"
+    },
+    {
+      "taxon_id": "t0054185",
+      "name_id": 127042,
+      "simple_name": "Lecanorchis taiwaniana",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0054186",
+      "name_id": 57384,
+      "simple_name": "Lecanorchis cerina",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0054187",
+      "name_id": 22772,
+      "simple_name": "Lecanorchis latens",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0054188",
+      "name_id": 22773,
+      "simple_name": "Lecanorchis thalassica",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0054189",
+      "name_id": 123013,
+      "simple_name": "Lecanorchis purpurea",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0054190",
+      "name_id": 22775,
+      "simple_name": "Lecanorchis vietnamica",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-11-02"
+    },
+    {
+      "taxon_id": "t0054191",
+      "name_id": 22776,
+      "simple_name": "Lecanorchis virella",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0058130",
+      "name_id": 61345,
+      "simple_name": "Lecanorchis multiflora var. bihuensis",
+      "rank": "Variety",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0074505",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0058131",
+      "name_id": 61347,
+      "simple_name": "Lecanorchis multiflora var. subpelorica",
+      "rank": "Variety",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0074505",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0058132",
+      "name_id": 57387,
+      "simple_name": "Lecanorchis ohwii",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0074505",
+      "name_id": 57385,
+      "simple_name": "Lecanorchis multiflora",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0074506",
+      "name_id": 57388,
+      "simple_name": "Lecanorchis suginoana",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0086544",
+      "name_id": 61346,
+      "simple_name": "Lecanorchis multiflora var. multiflora",
+      "rank": "Variety",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0074505",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0086545",
+      "name_id": 61349,
+      "simple_name": "Lecanorchis nigricans var. yakushimensis",
+      "rank": "Variety",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0103359",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0086880",
+      "name_id": 61348,
+      "simple_name": "Lecanorchis nigricans var. nigricans",
+      "rank": "Variety",
+      "taxon_status": "deleted",
+      "parent_taxon_id": "t0102545",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2023-12-14"
+    },
+    {
+      "taxon_id": "t0100369",
+      "name_id": 117579,
+      "simple_name": "Lecanorchis flavicans",
+      "rank": "Species",
+      "taxon_status": "deleted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": false,
+      "not_official": false,
+      "updated_at": "2024-12-23"
+    },
+    {
+      "taxon_id": "t0100370",
+      "name_id": 127042,
+      "simple_name": "Lecanorchis taiwaniana",
+      "rank": "Species",
+      "taxon_status": "deleted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2025-01-14"
+    },
+    {
+      "taxon_id": "t0101581",
+      "name_id": 22771,
+      "simple_name": "Lecanorchis japonica",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": false,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0102286",
+      "name_id": 148946,
+      "simple_name": "Lecanorchis bihuensis",
+      "rank": "Species",
+      "taxon_status": "deleted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2025-01-14"
+    },
+    {
+      "taxon_id": "t0102287",
+      "name_id": 120583,
+      "simple_name": "Lecanorchis triloba",
+      "rank": "Species",
+      "taxon_status": "deleted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2024-12-23"
+    },
+    {
+      "taxon_id": "t0102545",
+      "name_id": 57386,
+      "simple_name": "Lecanorchis nigricans",
+      "rank": "Species",
+      "taxon_status": "deleted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2023-12-14"
+    },
+    {
+      "taxon_id": "t0103359",
+      "name_id": 57386,
+      "simple_name": "Lecanorchis nigricans",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0103360",
+      "name_id": 61348,
+      "simple_name": "Lecanorchis nigricans var. nigricans",
+      "rank": "Variety",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0103359",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-09-23"
+    },
+    {
+      "taxon_id": "t0103416",
+      "name_id": 61345,
+      "simple_name": "Lecanorchis multiflora var. bihuensis",
+      "rank": "Variety",
+      "taxon_status": "deleted",
+      "parent_taxon_id": "t0074505",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2025-01-14"
+    },
+    {
+      "taxon_id": "t0103417",
+      "name_id": 61347,
+      "simple_name": "Lecanorchis multiflora var. subpelorica",
+      "rank": "Variety",
+      "taxon_status": "deleted",
+      "parent_taxon_id": "t0074505",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2025-01-14"
+    },
+    {
+      "taxon_id": "t0105551",
+      "name_id": 169791,
+      "simple_name": "Lecanorchis tabugawaensis",
+      "rank": "Species",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0024125",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2025-09-10"
+    },
+    {
+      "taxon_id": "t0106250",
+      "name_id": 255806,
+      "simple_name": "Lecanorchis purpurea var. actinomorpha",
+      "rank": "Variety",
+      "taxon_status": "accepted",
+      "parent_taxon_id": "t0054189",
+      "is_in_taiwan": true,
+      "not_official": false,
+      "updated_at": "2026-03-15"
+    }
+  ]
+}

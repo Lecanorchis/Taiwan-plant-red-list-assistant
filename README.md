@@ -8,6 +8,8 @@
 
 目前僅完成[設計規格草案](docs/planning/README.md)，包含[畫面與操作流程](docs/planning/workbench.md)、[評估欄位與資料包](docs/planning/data-contract.md)及[開發驗收清單](docs/planning/delivery-plan.md)。網頁與新資料格式尚未實作。下列命令屬於既有 CLI 原型。
 
+另有 [P0 可行性查核](docs/planning/feasibility.md) 與[試評情境及靜態畫面草圖](docs/planning/pilot-scenarios.md)。本輪已查核部分公開來源與瀏覽器能力，並據以補充跨網站資料匯入、分類階層與母種涵蓋的設計限制；這些查核不等同產品功能已完成。
+
 ## 新版紅皮書評估範圍
 
 以中華民國目前實際管轄範圍內的陸域為準，涵蓋臺灣本島及周邊附屬島嶼（蘭嶼、小蘭嶼、綠島、小琉球、龜山島、基隆嶼、彭佳嶼、棉花嶼、花瓶嶼等）、澎湖群島、金門群島、馬祖列島、烏坵、東沙島及太平島。 [範圍設定](skills/taiwan-plant-red-list/references/region.json)

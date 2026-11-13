@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1040" viewBox="0 0 1440 1040" role="img" aria-labelledby="title desc">
+  <title id="title">紅皮書評估作業台：由屬建立清單的設計示意</title>
+  <desc id="desc">以皿柱蘭屬公開資料示範候選清單、分類階層及母種覆蓋查核。這是靜態設計草圖，不是已完成的網頁。</desc>
+  <style>
+    text { font-family: 'Microsoft JhengHei', 'Noto Sans TC', sans-serif; fill:#263e37; }
+    .white { fill:#fff; } .muted { fill:#657971; } .brand-sub { fill:#c9dbd2; } .small { font-size:15px; }
+    .body { font-size:18px; } .label { font-size:16px; } .bold { font-weight:700; }
+    .latin { font-family: Georgia, 'Times New Roman', serif; font-style:italic; }
+  </style>
+  <rect width="1440" height="1040" fill="#f2f5f1"/>
+  <rect width="1440" height="82" fill="#22493d"/>
+  <circle cx="40" cy="40" r="15" fill="#9dc2a7"/>
+  <path d="M34 47 Q34 31 47 29 Q49 42 34 47 M34 47 L45 33" fill="none" stroke="#22493d" stroke-width="2"/>
+  <text x="68" y="48" class="white bold" font-size="25">紅皮書評估作業台</text>
+  <text x="360" y="48" class="brand-sub" font-size="17">Taiwan Plant Red List Assistant</text>
+  <rect x="1104" y="23" width="304" height="36" rx="18" fill="#426758"/>
+  <text x="1124" y="47" class="white label">設計示意 · 尚未實作網頁</text>
+  <rect x="0" y="82" width="226" height="958" fill="#e6ece5"/>
+  <text x="24" y="129" class="small muted">個人工作區</text>
+  <text x="24" y="165" class="bold body">我的植物評估清單</text>
+  <rect x="16" y="203" width="194" height="49" rx="8" fill="#fff"/>
+  <text x="30" y="234" class="bold body">01　建立清單</text>
+  <text x="30" y="292" class="body">02　分類查核</text>
+  <text x="30" y="350" class="body">03　分布查核</text>
+  <text x="30" y="408" class="body">04　等級評估</text>
+  <text x="30" y="466" class="body">05　檢查與備份</text>
+  <line x1="25" y1="506" x2="201" y2="506" stroke="#c7d3c7"/>
+  <text x="30" y="550" class="body">證據與參考資料</text>
+  <text x="30" y="599" class="body">AI 協助與建議</text>
+  <rect x="16" y="860" width="194" height="130" rx="10" fill="#f6f8f3"/>
+  <text x="30" y="891" class="bold label">資料由你保管</text>
+  <text x="30" y="921" class="small muted">評估內容保存在瀏覽器</text>
+  <text x="30" y="946" class="small muted">可隨時匯出備份資料包</text>
+  <text x="30" y="971" class="small muted">第一版不輸出正式報告</text>
+  <text x="262" y="126" class="small muted">清單總覽　／　加入分類群　／　依屬展開</text>
+  <text x="262" y="173" class="bold" font-size="31">從屬建立評估清單</text>
+  <text x="262" y="205" class="body muted">先預覽候選，再確認哪些分類單位進入評估。</text>
+  <rect x="262" y="230" width="1140" height="83" rx="10" fill="#fff" stroke="#d9e2d8"/>
+  <text x="282" y="261" class="small muted">輸入屬名</text>
+  <text x="282" y="292" class="bold" font-size="23">皿柱蘭屬</text>
+  <text x="413" y="292" class="latin" font-size="24">Lecanorchis</text>
+  <text x="780" y="263" class="label muted">資料示例：TaiCOL API · 2026-11-13</text>
+  <text x="780" y="292" class="small muted">正式使用時固定專案的名錄與階層快照</text>
+  <rect x="262" y="334" width="268" height="100" rx="10" fill="#fff"/>
+  <rect x="552" y="334" width="268" height="100" rx="10" fill="#fff"/>
+  <rect x="842" y="334" width="268" height="100" rx="10" fill="#fff"/>
+  <rect x="1132" y="334" width="270" height="100" rx="10" fill="#e0eddf"/>
+  <text x="283" y="376" class="bold" font-size="32">28</text><text x="283" y="408" class="label muted">查詢回傳項目</text>
+  <text x="573" y="376" class="bold" font-size="32">20</text><text x="573" y="408" class="label muted">接受名項目（排除已刪除項）</text>
+  <text x="863" y="376" class="bold" font-size="32">19</text><text x="863" y="408" class="label muted">其中標記存在於台灣（含屬）</text>
+  <text x="1153" y="376" class="bold" font-size="32">15</text><text x="1153" y="408" class="label">末端候選 · 仍待覆核</text>
+  <rect x="262" y="454" width="1140" height="70" rx="8" fill="#fff2d6" stroke="#eddbb1"/>
+  <text x="282" y="483" class="bold body" fill="#805b21">母種與種下單位需要一起檢查</text>
+  <text x="282" y="509" class="label">有下位分類群，不代表母種所有紀錄都已涵蓋。未歸屬資料會保留，不會自動分配。</text>
+  <rect x="262" y="548" width="770" height="370" rx="10" fill="#fff" stroke="#d9e2d8"/>
+  <text x="283" y="583" class="bold body">候選清單預覽</text>
+  <text x="283" y="612" class="small muted">顯示部分項目；15 個候選並非已確認的正式評估總數</text>
+  <rect x="277" y="630" width="740" height="39" rx="4" fill="#f0f4ee"/>
+  <text x="293" y="656" class="label muted">分類群與階層</text><text x="801" y="656" class="label muted">目前處理</text>
+  <text x="293" y="700" class="latin" font-size="21">Lecanorchis purpurea</text>
+  <text x="801" y="700" class="label">母種 · 覆蓋待查</text>
+  <line x1="293" y1="718" x2="1000" y2="718" stroke="#e8ede5"/>
+  <path d="M302 732 L302 746 L320 746" fill="none" stroke="#9cae9c" stroke-width="2"/>
+  <text x="332" y="751" class="latin" font-size="19">L. purpurea var. actinomorpha</text>
+  <text x="801" y="751" class="label">變種 · 候選</text>
+  <line x1="293" y1="770" x2="1000" y2="770" stroke="#e8ede5"/>
+  <text x="293" y="800" class="latin" font-size="21">Lecanorchis multiflora</text>
+  <text x="801" y="800" class="label">母種 · 3 個變種</text>
+  <line x1="293" y1="818" x2="1000" y2="818" stroke="#e8ede5"/>
+  <text x="293" y="848" class="latin" font-size="21">Lecanorchis nigricans</text>
+  <text x="801" y="848" class="label">母種 · 2 個變種</text>
+  <text x="293" y="892" class="small muted">［查看已刪除項目］　［查看未納入候選的項目］</text>
+  <rect x="1052" y="548" width="350" height="370" rx="10" fill="#fff" stroke="#d9e2d8"/>
+  <text x="1075" y="584" class="bold body">下一步要確認的事</text>
+  <text x="1075" y="624" class="label">1　下位單位是否完整涵蓋母種</text>
+  <text x="1075" y="662" class="label">2　種級紀錄能否歸入特定變種</text>
+  <text x="1075" y="700" class="label">3　新舊名稱是否指相同分類概念</text>
+  <line x1="1075" y1="724" x2="1378" y2="724" stroke="#e3e9df"/>
+  <text x="1075" y="757" class="bold label">建議保留</text>
+  <text x="1075" y="788" class="label muted">母種的整理頁與未歸屬紀錄</text>
+  <text x="1075" y="817" class="label muted">分類依據、來源與人工修改</text>
+  <rect x="1074" y="846" width="302" height="45" rx="7" fill="#eef4ed"/>
+  <text x="1100" y="875" class="label">需要時，請 AI 協助分類查核</text>
+  <text x="262" y="955" class="small muted">加入候選後仍可修改，不表示已完成分類確認或等級評估。</text>
+  <rect x="1052" y="941" width="141" height="49" rx="8" fill="#fff" stroke="#c2d0c1"/>
+  <text x="1085" y="972" class="body">返回修改</text>
+  <rect x="1210" y="941" width="192" height="49" rx="8" fill="#2d624d"/>
+  <text x="1234" y="972" class="white body bold">加入所選候選</text>
+  <text x="262" y="1020" class="small muted">設計草圖 v0.2　｜　資料來源：TaiCOL；候選數為示例篩選結果，不是紅皮書評估結果</text>
+</svg>

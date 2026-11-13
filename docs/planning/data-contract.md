@@ -54,6 +54,8 @@
 
 數值指標共用結構：`value`、`lower`、`upper`、`unit`、`valueStatus`、`method`、`period`、`evidenceIds`、`notes`。`valueStatus` 至少區分未評估、未知、測得、估計、推定與預測；依指標選擇適用值。對估計範圍的處理需明確記錄，不默默取中點當定值。
 
+分類群之間另記 `coverageStatus`（未確認／完整涵蓋／部分涵蓋）、`coverageRationale`、`coverageEvidenceIds` 及未歸屬紀錄關聯。此狀態描述所選下位單位對母種的涵蓋，不能只由有無子節點推定。母種可保留為整理項；原名變種與紀錄歸屬均需依據。[皿柱蘭屬的實測示例](feasibility.md)
+
 ### A–E 輸入與規則
 
 | 準則 | 預定結構化輸入 |
@@ -95,6 +97,8 @@ NE、NA、DD、RE、EW、EX、LC、NT 及受脅類別均需適當的理由欄位
 每筆證據包含 `id`、`sourceId`、書目／資料集、頁碼／章節／紀錄位置、來源主張、可支持的內容、限制、取得日期與附件。摘錄、轉述及評估者推論分開標示；AI 提出的推論不改寫成文獻原文。
 
 參考庫維護來源版本、授權、雜湊、原文件、結構化內容與頁碼對照。評估保存當時採用的版本；新增名錄或準則版本不自動重寫既有評估。2017 結果另存歷史分類概念及當時範圍，名稱對照可一對多、多對一或未解。
+
+TaiCOL 下載版與即時 API 的分類關係可能不同步，快照目錄需記錄各來源版本、取得時段、欄位轉換與差異處理。本輪確認下載 CSV 缺父階層 ID，因此不能只載入單一 CSV 就宣稱已具有完整的種下階層圖。API 的已刪除項目與非正式紀錄狀態也需保留供追溯。
 
 初期來源為 [TaiCOL 政策](https://taicol.tw/zh-hant/policy)、[TBN v2.6 文件](https://www.tbn.org.tw/data/api/v26)、[2017 紅皮書授權紀錄](https://commons.wikimedia.org/wiki/File:The_Red_List_of_Vascular_Plants_of_Taiwan,_2017.pdf) 與 [IUCN 文件](https://nrl.iucnredlist.org/resources/redlistguidelines)。文件結構可借鑑 [ai-redlist-exam 的來源與轉換說明](https://github.com/shaneweisz/ai-redlist-exam/blob/main/data/iucn-guidelines/source/README.md)，實際納入前仍逐檔確認版本、授權與轉換品質。
 
