@@ -2,11 +2,17 @@
 
 以可跨模型使用的 Agent Skill 和本機工具，協助使用者依 IUCN 指引完成臺灣維管束植物的個人區域評估。工作從一份分類群清單開始，逐一處理種、亞種或變種，保留可追溯的證據、區內初評、區域調整及審閱狀態。
 
+## 作業台改版規劃
+
+新版規劃以免安裝網頁為核心，使用 TaiCOL 名錄快照，支援手動操作、本機瀏覽器儲存、資料包備份與還原，以及四類 AI 技能的任務包與建議匯入。使用者審閱後才採用 AI 建議。第一版暫不產出正式報告，格式待計畫主事者確認。
+
+目前僅完成[設計規格草案](docs/planning/README.md)，包含[畫面與操作流程](docs/planning/workbench.md)、[評估欄位與資料包](docs/planning/data-contract.md)及[開發驗收清單](docs/planning/delivery-plan.md)。網頁與新資料格式尚未實作。下列命令屬於既有 CLI 原型。
+
 ## 新版紅皮書評估範圍
 
 以中華民國目前實際管轄範圍內的陸域為準，涵蓋臺灣本島及周邊附屬島嶼（蘭嶼、小蘭嶼、綠島、小琉球、龜山島、基隆嶼、彭佳嶼、棉花嶼、花瓶嶼等）、澎湖群島、金門群島、馬祖列島、烏坵、東沙島及太平島。 [範圍設定](skills/taiwan-plant-red-list/references/region.json)
 
-## 開始使用
+## 使用既有 CLI 原型
 
 將 [技能目錄](skills/taiwan-plant-red-list/) 整份提供給支援 [Agent Skills](https://agentskills.io/specification) 的主機，或讓具備檔案和終端機工具的 agent 先讀取 [SKILL.md](skills/taiwan-plant-red-list/SKILL.md)。技能使用 Markdown 與本機 CLI，無須設定模型 API 金鑰。僅能對話的模型可讀相同指南，搭配人工執行工具。
 
@@ -33,4 +39,4 @@ node skills/taiwan-plant-red-list/scripts/redlist.mjs report taiwania-cryptomeri
 
 工作流程參考 `ai-redlist-assessments` 的分項查核概念，以單一 agent 和臺灣區域指引設計。分布圖沿用原評估小幫手的點位、網格、凸包三層呈現，由 CLI 產生 SVG。 [參考儲存庫](https://github.com/shaneweisz/ai-redlist-assessments) · [原評估小幫手](https://taiwan-plant-red-list-helper.lecanorchis.chatgpt.site/)
 
-第一階段交付個人草稿與人工審閱報告。資料上傳、多人整合及互評留待下一階段。分類來源優先序和報告格式可由首批實際評估案例校正。
+既有 CLI 可產生個人 Markdown 草稿。新版網頁第一版聚焦清單、評估資料與資料包，正式報告輸出暫緩；資料上傳、多人整合及互評留待後續階段。已確認範圍與待討論細節以[作業台設計規格](docs/planning/README.md)為準。
