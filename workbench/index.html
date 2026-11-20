@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>臺灣植物紅皮書｜個人評估作業台</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <span class="mark" aria-hidden="true">❧</span
+      ><strong>臺灣植物紅皮書</strong
+      ><span class="subbrand">個人評估作業台</span
+      ><span class="local">本機工作區</span>
+    </header>
+    <div class="layout">
+      <aside>
+        <label for="projects">我的專案</label
+        ><select id="projects" aria-label="切換專案"></select
+        ><button id="newProject">建立專案</button>
+        <nav>
+          <button data-page="list">評估清單</button
+          ><button data-page="add">加入分類群</button
+          ><button data-page="backup">備份與還原</button>
+        </nav>
+        <div class="source">
+          分類資料<br /><a
+            href="https://taicol.tw/zh-hant/download"
+            target="_blank"
+            rel="noreferrer"
+            >TaiCOL · 2026.10.30</a
+          >
+          <p>個人資料儲存在目前瀏覽器。換裝置前請匯出備份。</p>
+        </div>
+      <a href="SOURCES.txt" target="_blank" rel="noreferrer">名錄來源與授權</a>
+</aside>
+      <main>
+        <div id="notice" role="status" aria-live="polite"></div>
+        <section id="page"></section>
+      </main>
+    </div>
+    <dialog id="projectDialog">
+      <form id="projectForm">
+        <h2>建立評估專案</h2>
+        <label
+          >專案名稱<input
+            name="title"
+            required
+            maxlength="120"
+            placeholder="例如：蘭科個人評估"
+        /></label>
+        <p>
+          評估範圍採新版紅皮書陸域範圍，涵蓋本島、周邊附屬島嶼、澎湖、金門、馬祖、烏坵、東沙及太平島。
+        </p>
+        <div class="actions">
+          <button type="button" id="cancelProject">取消</button
+          ><button class="primary">建立專案</button>
+        </div>
+      </form>
+    </dialog>
+    <script src="vendor/index.js"></script>
+    <script src="data/catalog.js"></script>
+    <script src="data/parents.js"></script>
+    <script src="core.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

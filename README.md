@@ -2,13 +2,19 @@
 
 以可跨模型使用的 Agent Skill 和本機工具，協助使用者依 IUCN 指引完成臺灣維管束植物的個人區域評估。工作從一份分類群清單開始，逐一處理種、亞種或變種，保留可追溯的證據、區內初評、區域調整及審閱狀態。
 
-## 作業台改版規劃
+## 使用個人評估作業台
 
-新版規劃以免安裝網頁為核心，使用 TaiCOL 名錄快照，支援手動操作、本機瀏覽器儲存、資料包備份與還原，以及四類 AI 技能的任務包與建議匯入。使用者審閱後才採用 AI 建議。第一版暫不產出正式報告，格式待計畫主事者確認。
+專案擁有者可以開啟[私人試用作業台](https://taiwan-plant-red-list-assistant.lecanorchis.chatgpt.site)。所有使用者也可以[下載儲存庫 ZIP](https://github.com/Lecanorchis/Taiwan-plant-red-list-assistant/archive/refs/heads/main.zip)，解壓縮後在 Chrome 或 Edge 開啟 [workbench/index.html](workbench/index.html)。使用同一個入口及瀏覽器設定檔，以便接續工作。
 
-目前僅完成[設計規格草案](docs/planning/README.md)，包含[畫面與操作流程](docs/planning/workbench.md)、[評估欄位與資料包](docs/planning/data-contract.md)及[開發驗收清單](docs/planning/delivery-plan.md)。網頁與新資料格式尚未實作。下列命令屬於既有 CLI 原型。
+1. 選「建立專案」，輸入專案名稱。
+2. 在「加入分類群」輸入學名、中文名、屬或科，每行一個。也可讀取 UTF-8 CSV，含多欄時以「學名」或 scientificName 標記名稱欄。
+3. 按「預覽候選」，勾選要處理的項目。以「皿柱蘭屬」試用時，這版名錄會列出 18 項，其中 3 項為母種整理項，預選 15 項。無法匹配的名稱可人工保留。
+4. 從清單點入分類群，查核接受名，記下文獻依據、差異與評估筆記。輸入稍停後會自動保存。跨分頁衝突時，先複製待存文字再重新載入。
+5. 到「備份與還原」下載 ZIP。換瀏覽器、電腦、網址或清除網站資料前請先備份。匯入時可先預覽，再還原為獨立副本。
 
-另有 [P0 可行性查核](docs/planning/feasibility.md) 與[試評情境及靜態畫面草圖](docs/planning/pilot-scenarios.md)。本輪已查核部分公開來源與瀏覽器能力，並據以補充跨網站資料匯入、分類階層與母種涵蓋的設計限制；這些查核不等同產品功能已完成。
+本次交付為清單與分類查核階段。分布資料、地圖與空間計算目前可由下方既有 CLI 操作。準則表單與 AI 建議匯入排在後續網頁開發階段。正式報告輸出暫緩。
+
+名錄含 8,678 筆種、亞種與變種，採 2026-10-30 的 TaiCOL 物種快照，父階層另依公開 API 查核。詳見[名錄來源與授權](workbench/SOURCES.txt)、[操作規格](docs/planning/workbench.md)及[開發順序](docs/planning/delivery-plan.md)。
 
 ## 新版紅皮書評估範圍
 

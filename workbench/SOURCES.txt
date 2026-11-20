@@ -1,0 +1,15 @@
+分類名錄：鍾國芳、邵廣昭（2026）臺灣物種名錄 TaiCOL，https://taicol.tw/
+物種快照：TaiCOL_taxon_20261030.csv，取自 https://taicol.tw/static/upload/TaiCOL_taxon_20261030.zip
+下載來源 ZIP 的 SHA-256：549e829adad3e5e75240331cb1eb4afe7c2888192187d9d69a9bf9dbbcff135b
+衍生整理：只選 phylum=Tracheophyta 及 rank=Species、Subspecies、Variety，保留原始分類群與學名識別碼、接受名、命名者、中文名、階層、科屬、異名、誤用名、原生性與非正式紀錄旗標，轉為離線索引。共 8,678 列。
+資料列依序為 taxon_id、name_id、simple_name、name_author、common_name_c、rank、family、family_c、genus、genus_c、synonyms、misapplied、alternative_name_c、alien_type、not_official。
+網站文字授權政策（除另列條款外 CC BY 4.0）：https://taicol.tw/zh-hant/policy
+CC BY 4.0：https://creativecommons.org/licenses/by/4.0/
+
+父階層補充：2026-11-20 查詢 TaiCOL V2 taxon API，taxon_group=Tracheophyta，rank 分別為 Subspecies、Variety，limit=100，以 offset 分頁。篩選 accepted 項目，再依分類群 ID、學名 ID、學名文字及同屬的父 ID 對回固定版名錄。取得 832 組。另依專案 2026-11-13 皿柱蘭屬樣本補入 t0103360 一組。合計 833 組，11 筆種下單位保持待查。這是作業台整理的組合版本。
+API 文件及政府資料開放授權條款：https://taicol.tw/zh-hant/api
+公開來源的台灣分布旗標仍需核對新版評估範圍，尤其是離島。
+
+ZIP 函式庫：fflate 0.8.2 (MIT)，Copyright (c) 2023 Arjun Barrett，授權全文見 vendor/LICENSE。
+來源：https://www.npmjs.com/package/fflate/v/0.8.2
+原創作業台程式採用儲存庫 LICENSE（MIT）。

@@ -1,3 +1,5 @@
 /assessments/
 /node_modules/
 *.tmp
+/.site-preview/
+/.site-preview-release.tar.gz
